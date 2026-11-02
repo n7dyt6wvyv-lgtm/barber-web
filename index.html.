@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BARBER CLUB | Premium Haircuts</title>
+  <meta name="description" content="Prémiový barber shop. Profesionální střihy, úprava vousů a osobní přístup.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #101010;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      min-height: 85px;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      color: #d4aa65;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: #d4aa65; }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
+      background:
+        linear-gradient(90deg, #101010 20%, #101010bb 70%, #10101066),
+        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85') center/cover;
+    }
+
+    .hero-content { max-width: 650px; }
+
+    .hero p {
+      color: #d4aa65;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    h1 span { color: #d4aa65; }
+
+    .hero-description {
+      color: #ccc !important;
+      letter-spacing: 0 !important;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4aa65;
+      color: #111;
+      padding: 16px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    section { padding: 85px 10%; }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .gold { color: #d4aa65; }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 45px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      background: #1b1b1b;
+      border: 1px solid #333;
+      padding: 35px 25px;
+      text-align: center;
+    }
+
+    .service h3 {
+      color: #d4aa65;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 28px;
+      margin-top: 22px;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #191919;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+      line-height: 1.9;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #bbb;
+      line-height: 2;
+    }
+
+    footer {
+      background: #080808;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #292929;
+    }
+
+    @media(max-width: 750px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 12px;
+      }
+
+      .hero { min-height: 550px; }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 65px 7%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BARBER CLUB</div>
+  <nav>
+    <a href="#home">DOMŮ</a>
+    <a href="#services">SLUŽBY</a>
+    <a href="#about">O NÁS</a>
+    <a href="#contact">KONTAKT</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <p>PREMIUM BARBER EXPERIENCE</p>
+      <h1>VÍC NEŽ JEN <span>STŘIH.</span></h1>
+      <p class="hero-description">
+        Profesionální péče o vlasy a vousy.
+        Styl, kvalita a preciznost v každém detailu.
+      </p>
+      <a href="#contact" class="btn">OBJEDNAT SE</a>
+    </div>
+  </div>
+
+  <section id="services">
+    <h2 class="section-title">NAŠE <span class="gold">SLUŽBY</span></h2>
+    <p class="subtitle">Dopřej si profesionální péči.</p>
+
+    <div class="services">
+      <div class="service">
+        <h3>Pánský střih</h3>
+        <p>Klasický i moderní střih podle tvého stylu.</p>
+        <div class="price">450 Kč</div>
+      </div>
+
+      <div class="service">
+        <h3>Úprava vousů</h3>
+        <p>Precizní tvarování a úprava vousů.</p>
+        <div class="price">250 Kč</div>
+      </div>
+
+      <div class="service">
+        <h3>Kompletní péče</h3>
+        <p>Střih vlasů a profesionální úprava vousů.</p>
+        <div class="price">650 Kč</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">O <span class="gold">NÁS</span></h2>
+    <p>
+      Věříme, že každý muž si zaslouží vypadat skvěle.
+      Naším cílem je nabídnout profesionální služby,
+      příjemné prostředí a individuální přístup.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">KONTAKTUJ <span class="gold">NÁS</span></h2>
+    <p>Telefon: +420 123 456 789</p>
+    <p>E-mail: info@barberclub.cz</p>
+    <p>Adresa: Praha, Česká republika</p>
+    <br>
+    <a href="tel:+420123456789" class="btn">ZAVOLAT A OBJEDNAT SE</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 BARBER CLUB | Všechna práva vyhrazena
+</footer>
+
+</body>
+</html>
