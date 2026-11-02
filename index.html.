@@ -1,200 +1,249 @@
 
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BARBER CLUB | Premium Haircuts</title>
-  <meta name="description" content="Prémiový barber shop. Profesionální střihy, úprava vousů a osobní přístup.">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARBER CLUB | Premium Barbershop</title>
 
-    html { scroll-behavior: smooth; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      background: #101010;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      min-height: 85px;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #292929;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .logo {
-      color: #d4aa65;
-      font-size: 25px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
+body {
+  background: #0b0b0b;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
-    }
+header {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #101010;
+  border-bottom: 1px solid #292929;
+}
 
-    nav a:hover { color: #d4aa65; }
+.logo {
+  color: #d6ad65;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
 
-    .hero {
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      padding: 80px 10%;
-      background:
-        linear-gradient(90deg, #101010 20%, #101010bb 70%, #10101066),
-        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85') center/cover;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 13px;
+  transition: .3s;
+}
 
-    .hero-content { max-width: 650px; }
+nav a:hover {
+  color: #d6ad65;
+}
 
-    .hero p {
-      color: #d4aa65;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-    }
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background:
+    linear-gradient(90deg, #080808 15%, #080808bb 60%, #08080855),
+    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
 
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
+.hero-content {
+  max-width: 650px;
+}
 
-    h1 span { color: #d4aa65; }
+.small-title {
+  color: #d6ad65;
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
 
-    .hero-description {
-      color: #ccc !important;
-      letter-spacing: 0 !important;
-      line-height: 1.7;
-      margin-bottom: 35px;
-    }
+h1 {
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: 1.05;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #d4aa65;
-      color: #111;
-      padding: 16px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .3s;
-    }
+h1 span {
+  color: #d6ad65;
+}
 
-    .btn:hover {
-      background: white;
-      transform: translateY(-3px);
-    }
+.hero-description {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
 
-    section { padding: 85px 10%; }
+.btn {
+  display: inline-block;
+  background: #d6ad65;
+  color: #111;
+  padding: 17px 32px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  transition: .3s;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
+.btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
 
-    .gold { color: #d4aa65; }
+section {
+  padding: 100px 10%;
+}
 
-    .subtitle {
-      text-align: center;
-      color: #aaa;
-      margin-bottom: 45px;
-    }
+.section-heading {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+.gold {
+  color: #d6ad65;
+}
 
-    .service {
-      background: #1b1b1b;
-      border: 1px solid #333;
-      padding: 35px 25px;
-      text-align: center;
-    }
+.subtitle {
+  color: #999;
+  text-align: center;
+  margin-bottom: 55px;
+}
 
-    .service h3 {
-      color: #d4aa65;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
 
-    .service p {
-      color: #aaa;
-      line-height: 1.6;
-    }
+.service {
+  background: #171717;
+  border: 1px solid #333;
+  padding: 45px 25px;
+  text-align: center;
+  transition: .3s;
+}
 
-    .price {
-      font-size: 28px;
-      margin-top: 22px;
-      font-weight: bold;
-    }
+.service:hover {
+  border-color: #d6ad65;
+  transform: translateY(-6px);
+}
 
-    .about {
-      background: #191919;
-      text-align: center;
-    }
+.service h3 {
+  color: #d6ad65;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
 
-    .about p {
-      max-width: 700px;
-      margin: auto;
-      color: #bbb;
-      line-height: 1.9;
-    }
+.service p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+}
 
-    .contact {
-      text-align: center;
-    }
+.price {
+  font-size: 27px;
+  font-weight: 700;
+  margin-top: 25px;
+}
 
-    .contact p {
-      color: #bbb;
-      line-height: 2;
-    }
+.about {
+  background: #171717;
+  text-align: center;
+}
 
-    footer {
-      background: #080808;
-      padding: 30px;
-      text-align: center;
-      color: #777;
-      border-top: 1px solid #292929;
-    }
+.about p {
+  max-width: 750px;
+  margin: auto;
+  color: #bbb;
+  line-height: 2;
+}
 
-    @media(max-width: 750px) {
-      header {
-        flex-direction: column;
-        gap: 20px;
-      }
+.contact {
+  text-align: center;
+}
 
-      nav a {
-        margin: 0 8px;
-        font-size: 12px;
-      }
+.contact p {
+  color: #bbb;
+  line-height: 2.3;
+}
 
-      .hero { min-height: 550px; }
+.contact .btn {
+  margin-top: 25px;
+}
 
-      .services {
-        grid-template-columns: 1fr;
-      }
+footer {
+  background: #050505;
+  padding: 35px;
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  border-top: 1px solid #292929;
+}
 
-      section { padding: 65px 7%; }
-    }
-  </style>
+@media(max-width: 750px) {
+  header {
+    height: auto;
+    padding: 25px 5%;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 570px;
+    padding: 60px 7%;
+  }
+
+  section {
+    padding: 70px 7%;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="logo">BARBER CLUB</div>
+
   <nav>
     <a href="#home">DOMŮ</a>
     <a href="#services">SLUŽBY</a>
@@ -204,60 +253,73 @@
 </header>
 
 <main>
-  <div class="hero" id="home">
-    <div class="hero-content">
-      <p>PREMIUM BARBER EXPERIENCE</p>
-      <h1>VÍC NEŽ JEN <span>STŘIH.</span></h1>
-      <p class="hero-description">
-        Profesionální péče o vlasy a vousy.
-        Styl, kvalita a preciznost v každém detailu.
-      </p>
-      <a href="#contact" class="btn">OBJEDNAT SE</a>
-    </div>
-  </div>
 
-  <section id="services">
-    <h2 class="section-title">NAŠE <span class="gold">SLUŽBY</span></h2>
-    <p class="subtitle">Dopřej si profesionální péči.</p>
+<div class="hero" id="home">
+  <div class="hero-content">
+    <p class="small-title">PREMIUM BARBER EXPERIENCE</p>
 
-    <div class="services">
-      <div class="service">
-        <h3>Pánský střih</h3>
-        <p>Klasický i moderní střih podle tvého stylu.</p>
-        <div class="price">450 Kč</div>
-      </div>
+    <h1>VÍC NEŽ JEN <span>STŘIH.</span></h1>
 
-      <div class="service">
-        <h3>Úprava vousů</h3>
-        <p>Precizní tvarování a úprava vousů.</p>
-        <div class="price">250 Kč</div>
-      </div>
-
-      <div class="service">
-        <h3>Kompletní péče</h3>
-        <p>Střih vlasů a profesionální úprava vousů.</p>
-        <div class="price">650 Kč</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2 class="section-title">O <span class="gold">NÁS</span></h2>
-    <p>
-      Věříme, že každý muž si zaslouží vypadat skvěle.
-      Naším cílem je nabídnout profesionální služby,
-      příjemné prostředí a individuální přístup.
+    <p class="hero-description">
+      Styl, preciznost a profesionální péče.
+      Objev místo, kde se z obyčejného střihu
+      stává zážitek.
     </p>
-  </section>
 
-  <section class="contact" id="contact">
-    <h2 class="section-title">KONTAKTUJ <span class="gold">NÁS</span></h2>
-    <p>Telefon: +420 123 456 789</p>
-    <p>E-mail: info@barberclub.cz</p>
-    <p>Adresa: Praha, Česká republika</p>
-    <br>
-    <a href="tel:+420123456789" class="btn">ZAVOLAT A OBJEDNAT SE</a>
-  </section>
+    <a href="#contact" class="btn">OBJEDNAT SE</a>
+  </div>
+</div>
+
+<section id="services">
+  <h2 class="section-heading">NAŠE <span class="gold">SLUŽBY</span></h2>
+  <p class="subtitle">Profesionální péče pro každého muže.</p>
+
+  <div class="services">
+
+    <div class="service">
+      <h3>PÁNSKÝ STŘIH</h3>
+      <p>Klasické i moderní účesy podle tvého stylu.</p>
+      <div class="price">450 Kč</div>
+    </div>
+
+    <div class="service">
+      <h3>ÚPRAVA VOUSŮ</h3>
+      <p>Precizní tvarování a profesionální péče.</p>
+      <div class="price">250 Kč</div>
+    </div>
+
+    <div class="service">
+      <h3>FULL SERVICE</h3>
+      <p>Kompletní péče o vlasy i vousy.</p>
+      <div class="price">650 Kč</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="section-heading">O <span class="gold">NÁS</span></h2>
+
+  <p>
+    Barber Club je místem, kde se potkává styl,
+    kvalita a profesionální přístup.
+    Naším cílem je nabídnout každému zákazníkovi
+    skvělý střih a příjemný zážitek.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-heading">KONTAKTUJ <span class="gold">NÁS</span></h2>
+
+  <p>Telefon: +420 123 456 789</p>
+  <p>E-mail: info@barberclub.cz</p>
+  <p>Adresa: Praha, Česká republika</p>
+
+  <a href="tel:+420123456789" class="btn">
+    ZAVOLAT A OBJEDNAT SE
+  </a>
+</section>
+
 </main>
 
 <footer>
